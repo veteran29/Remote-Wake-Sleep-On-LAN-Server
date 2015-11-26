@@ -8,6 +8,7 @@ License: GPL v3 (http://www.gnu.org/licenses/gpl.html)
 
 //You should not need to edit this file. Adjust Parameters in the config file:
 require_once('config.php');
+require_once('wol.php');
 
 //set headers that harden the HTTPS session
 if ($USE_HTTPS)
@@ -178,7 +179,7 @@ else
                 if ($approved_wake)
                 {
                 	echo "<p>Approved. Sending WOL Command...</p>";
-					exec ('wakeonlan ' . $COMPUTER_MAC[$selectedComputer]);
+					wol($BROADCAST_IP, $COMPUTER_MAC[$selectedComputer]);
 					echo "<p>Command Sent. Waiting for " . $COMPUTER_NAME[$selectedComputer] . " to wake up...</p><p>";
 					$count = 1;
 					$down = true;

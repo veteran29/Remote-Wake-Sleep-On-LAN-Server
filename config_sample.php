@@ -28,6 +28,9 @@
 	//This is the MAC address of the Network Interface on the computer you are trying to wake.
 	$COMPUTER_MAC = array("00:00:00:00:00:00","00:00:00:00:00:00");
 
+	//This is the BROADCAST IP address of the computer you are trying to wake.
+	$BROADCAST_IP = "192.168.0.255";
+	
 	//This is the LOCAL IP address of the computer you are trying to wake.  Use a reserved DHCP through your router's administration interface to ensure it doesn't change.
 	$COMPUTER_LOCAL_IP = array("192.168.0.1","192.168.0.2");
 
