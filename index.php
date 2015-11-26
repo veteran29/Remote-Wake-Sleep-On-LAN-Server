@@ -8,6 +8,7 @@ License: GPL v3 (http://www.gnu.org/licenses/gpl.html)
 
 //You should not need to edit this file. Adjust Parameters in the config file:
 require_once('config.php');
+require_once('libcurlemu\libcurlemu.inc.php');
 require_once('wol.php');
 
 //set headers that harden the HTTPS session
